@@ -1,0 +1,41 @@
+#firstNameField {
+    width: 300px;
+    padding: 15px;
+    margin: 15px;
+    }
+#firstNameInput {
+    width: 150px;
+    border: 5px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+#lastNameField {
+        width: 300px;
+        padding: 15px;
+        margin: 15px;
+}
+
+#lastNameInput {
+    width: 150px;
+    border: 5px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+#empId {
+    width: 300px;
+    padding: 15px;
+    margin: 15px;
+}
+
+#job {
+    width: 300px;
+    padding: 15px;
+    margin: 15px;
+}
+#salary {
+    width: 300px;
+    padding: 15px;
+    margin: 15px;
+}  
