@@ -7,7 +7,7 @@ var port = process.env.PORT || 3000;
 var employee = require('./routes/employee');
 
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static('server/public'));
+app.use(express.static('public'));
 
 //for server routes
 app.use('/employee', employee);

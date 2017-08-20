@@ -10,15 +10,18 @@
 
     </head>
     <body ng-app="EmployeeApp" ng-controller="EmployeeController as vm">
+    <div id="inputDiv">
       <h1>Employee Database Portal</h1>
         <div id="firstNameField"> 
             <label for="firstNameInput">First Name</label>
             <input type="text" id="firstNameInput" placeholder="First Name" ng-model="vm.newEmployee.firstName">
         </div>
+    
         <div id="lastNameField">
             <label for="lastNameInput">Last Name</label>
             <input type="text" id="lastNameInput" placeholder="Last Name" ng-model="vm.newEmployee.lastName">
         </div>
+        
         <div id="empId">    
             <label for="employeeId">Employee ID</label>
             <input type="number" id="employeeId" placeholder="ID" ng-model="vm.newEmployee.employeeId">
@@ -27,11 +30,13 @@
             <label for="jobTitle">Job Title</label>
             <input type="text" id="jobTitle" placeholder="Job Title" ng-model="vm.newEmployee.jobTitle">
         </div>
+        
         <div id="salary">    
             <label for="salaryInput">Annual Salary</label>
             <input type="number" id="salaryInput" placeholder="Annual Salary" ng-model="vm.newEmployee.annualSalary">
         </div>
-     
         
+     
+    </div>   
     </body>
 </html>
