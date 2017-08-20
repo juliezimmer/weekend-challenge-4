@@ -9,10 +9,11 @@
     background-attachment: fixed;
     background-size: 100%;
     opacity: 0.3;
+    
 }
 
 *{
-    background-color: rosybrown;
+    background-color: rosybrown;  
 }
 
 #firstNameField {
@@ -21,10 +22,8 @@
     margin: 5px;
     float: left;
     margin: 10px;
-    position: static;
-    
+}
 
-    }
 #firstNameInput {
     width: 200px;
     border: 2px solid black;
@@ -32,8 +31,8 @@
     margin: 5px;
     height: 10px; 
     background-color: white;
-
 }
+
 #lastNameField {
         width: 400px;
         padding: 5px;
@@ -66,14 +65,12 @@
     margin: 5px;
     height: 10px;
     background-color: white;
-    
 }
 
 #job {
     width: 400px;
     padding: 5px;
     margin: 5px;
-    
 }
 
 #jobTitle {
@@ -83,14 +80,12 @@
     margin: 5px;
     height: 10px;
     background-color: white;
-    
 }
 
 #salary {
     width: 300px;
     padding: 5px;
     margin: 5px;
-    
 }  
 
 #salaryInput {
@@ -100,7 +95,6 @@
     margin: 10px;
     height: 10px;
     background-color: white;
-    
 }
 
 #submitButton{
@@ -111,12 +105,12 @@
     padding:5px;
     border: 2px solid black; 
     background-color: white;
-    
 }
 
 table{
     width: 100%;
 }
+
 td {
     width:20%;
 }

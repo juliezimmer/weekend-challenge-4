@@ -12,7 +12,7 @@ app.controller('EmployeeController', ['$http', function ($http){
     self.getEmployees = function() {
         $http({
             method: 'GET',
-            url: '/employee'
+            url: '/employee',
         }).then(function(response) {
             console.log(response);
             console.log(response.data);
@@ -32,4 +32,7 @@ app.controller('EmployeeController', ['$http', function ($http){
        }); //end of $http POST request
    }; //end of postNewEmployee function
    self.getEmployees();
+   self.newEmployee = {};
 }]);
+
+
