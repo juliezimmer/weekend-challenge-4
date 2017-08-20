@@ -5,4 +5,5 @@ create table employees (
 	job_title varchar (40) not null,
 	annual_salary integer not null
 );
+
 	

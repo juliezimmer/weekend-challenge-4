@@ -1,7 +1,7 @@
 #inputDiv {
     background-color: rosybrown;
     width: 60%;
-    height:800px;
+    height:450px;
 }
 
 #firstNameField {
@@ -43,7 +43,6 @@
     margin: 5px;
     
 }
-
 #employeeId {
     width: 200px;
     border: 2px solid black;
@@ -81,3 +80,28 @@
     margin: 10px;
     height: 10px;
 }
+
+#submitButton{
+    height:37px;
+    width: 75px;
+    border-radius: 10px;
+    margin: 10px;
+    padding:5px;
+    border: 2px solid black;  
+}
+
+#tableDiv{
+    background-color: rosybrown;
+    width: 60%;
+    height:450px;
+}
+
+table{
+    width: 100%;
+}
+td {
+    width:20%;
+}
+
+
+ 
