@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="styles.css"> 
 </head>
     <body ng-app="EmployeeApp" ng-controller="EmployeeController as vm">
-    <div id="inputDiv">
+    <div id="background"></div>
+    <div id="infoContainer">
       <h1>Employee Database Portal</h1>
         <div id="firstNameField"> 
             <label for="firstNameInput">First Name</label>
@@ -35,9 +36,6 @@
             <input type="number" id="salaryInput" placeholder="Annual Salary" ng-model="vm.newEmployee.annualSalary">
         </div>
         <button id="submitButton" ng-click="vm.postnewEmployee()">Submit</button>
-    </div>
-    
-    <div id="tableDiv">
         <h1>Employee List</h1>
         <table>
             <thead>

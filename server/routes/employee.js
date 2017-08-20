@@ -28,11 +28,10 @@ router.get('/', function(req,res) {
     });
 });
 
-
-
 //post route
-/*router.post('/', function(req,res){
-    console.log('employee post route has been hit');
+router.post('/', function(req,res){
+    var newEmployee = req.body;
+    console.log('employee post route was hit');
     //connecting to DB
     pool.connect(function (err, db, done){
         if(err) {
@@ -41,9 +40,9 @@ router.get('/', function(req,res) {
             res.sendStatus(500);
         } else {
             //connection established, query can proceed
-            db.query('INSERT INTO employees(id,first_name, last_name, job_title, annual_salary) VALUES ($1, $2, $3, $4, $5);', 
-            [req.body.id, req.body.firstName, req.body.lastName, req.body.jobTitle, req.body.annualSalary]
-                done();
+            db.query('INSERT INTO employees(first_name, last_name, job_title, annual_salary) VALUES ($1, $2, $3, $4);', 
+            [newEmployee.firstName, newEmployee.lastName, newEmployee.jobTitle, newEmployee.annualSalary],
+                done());
                 if(errorMakingQuery){
                     //if query is not successful
                     console.log('There was a problem with the query');
@@ -54,7 +53,7 @@ router.get('/', function(req,res) {
                 }
             };
         });
-    });*/
+    });
 
 
 module.exports = router;
