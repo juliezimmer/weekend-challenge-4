@@ -23,13 +23,13 @@ app.controller('EmployeeController', ['$http', function ($http){
    //Add the new employee to the DB
    self.postNewEmployee = function() {
        $http({
-           methos:'POST',
-           url: '/message',
+           method:'POST',
+           url: '/employee',
            data: self.newEmployee
        }).then(function(response) {
             console.log(response);
             self.getEmployees(); //this function will now update the DOM with the //new employee
        }); //end of $http POST request
    }; //end of postNewEmployee function
-   self.getNewEmployees();
+   self.getEmployees();
 }]);

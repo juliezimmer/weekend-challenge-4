@@ -3,9 +3,36 @@ var express = require('express');
 var router = express.Router();
 var pool = require('../modules/pool');
 
+//get route
+router.get('/', function(req,res) {
+    console.log('employee GET route was hit');
+    //connect to DB
+    pool.connect(function(err, db, done) {
+        //checking connection
+        if(err) {
+            console.log('There was an error connecting to the DB');
+                res.sendStatus(500);
+        } else {
+            //successful connection. Query proceeds
+            db.query('SELECT * from employees;', function(errorMakingQuery, result){
+                done();
+                //if query is not successful
+                if (errorMakingQuery) {
+                    console.log('There was an error with the DB query', errorMakingQuery);
+                    res.sendStatus(500);
+                } else {
+                    res.send(result.rows);
+                }
+            });
+        }
+    });
+});
+
+
+
 //post route
 /*router.post('/', function(req,res){
-    console.log('message post route has been hit');
+    console.log('employee post route has been hit');
     //connecting to DB
     pool.connect(function (err, db, done){
         if(err) {

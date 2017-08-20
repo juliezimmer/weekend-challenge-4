@@ -6,4 +6,7 @@ create table employees (
 	annual_salary integer not null
 );
 
+INSERT INTO employees (first_name, last_name, job_title, annual_salary) 
+VALUES ('Jane', 'Smith', 'Senior VP, Information Technology', 150000); 
+
 	
