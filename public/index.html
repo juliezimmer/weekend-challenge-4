@@ -47,9 +47,6 @@
                         Last Name
                     </th>
                     <th>
-                        ID
-                    </th>
-                    <th>
                         Title
                     </th>
                     <th>
@@ -59,15 +56,15 @@
             </thead>
             <tbody>
                 <tr ng-repeat="employee in vm.employees">
-                    <td>{{employee.firstName}}</td>
-                    <td>{{employee.lastName}}</td>
-                    <td>{{employee.employeeId}}</td>
-                    <td>{{employee.jobTitle}}</td>
-                    <td>{{employee.annualSalary}}</td>
+                    <td>{{employee.first_name}}</td>
+                    <td>{{employee.last_name}}</td>
+                    <td>{{employee.job_title}}</td>
+                    <td>{{employee.annual_salary}}</td>
+                </tr>    
             </tbody>
         </table>
     </div>
-    <h2>Monthly Salary Expenditures:{{vm.getTotalMonthlySalary()}}</h2>
+     <h2>Monthly Salary Expenditures: {{vm.getTotalMonthlySalary() | currency}}</h2> 
 </div>
     </body>
 </html>

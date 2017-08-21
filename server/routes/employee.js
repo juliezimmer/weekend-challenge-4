@@ -1,16 +1,20 @@
-//routes
+//base url route
 var express = require('express');
 var router = express.Router();
 var pool = require('../modules/pool');
+//var path = route('path'); could also go in this file
 
 //get route
 router.get('/', function(req,res) {
     console.log('employee GET route was hit');
+    //res.sendFile(path.resolve(location of index.html file goes in the parens);
+    //this tells the server to send the response to the client and to send it to the index.html
+
     //connect to DB
     pool.connect(function(err, db, done) {
         //checking connection
         if(err) {
-            console.log('There was an error connecting to the DB');
+            console.log('There was an error connecting to the DB', err);
                 res.sendStatus(500);
         } else {
             //successful connection. Query proceeds
@@ -46,7 +50,7 @@ router.post('/', function(req,res){
                     done();
                 if(errorMakingQuery){
                     //if query is not successful
-                    console.log('There was a problem with the query');
+                    console.log('There was a problem with the query', errorMakingQuery);
                     res.sendStatus(500);
                 } else {
                  //the query was successful
