@@ -1,3 +1,4 @@
+/*
 #background {
     position: fixed;
     top:0;
@@ -9,22 +10,26 @@
     background-attachment: fixed;
     background-size: 100%;
     opacity: 0.3;
+    background-color: rosybrown; 
+}
+*/
+
+
+*{
+    background-color: rosybrown; 
     
 }
 
-*{
-    background-color: rosybrown;  
-}
 
 #firstNameField {
     width: 400px;
     padding: 5px;
     margin: 5px;
     float: left;
-    margin: 10px;
+    margin: 5px;
 }
 
-#firstNameInput {
+#firstName {
     width: 200px;
     border: 2px solid black;
     padding: 10px;
@@ -39,19 +44,72 @@
         margin: 5px;
         float: left;
         margin: 5px;
-        
 }
 
-#lastNameInput {
+#lastName {
     width: 200px;
     border: 2px solid black;
     padding: 10px;
-    margin: 10px;
+    margin: 5px;
     height: 10px;
     background-color: white;
     
 }
 
+#job {
+    width: 400px;
+    padding: 5px;
+    margin: 5px;
+    float: left;
+    margin: 5px;
+}
+
+#jobTitle {
+    width: 200px;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 5px;
+    height: 10px;
+    background-color: white;
+}
+
+#salary {
+    width: 400px;
+    padding: 5px;
+    margin: 5px;
+    float: left;
+    margin: 5px;
+}  
+
+#annualSalary{
+    width: 200px;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 5px;
+    height: 10px;
+    background-color: white;
+}
+
+#submitButton{
+    height:37px;
+    width: 75px;
+    border-radius: 10px;
+    margin: 10px;
+    padding:5px;
+    border: 2px solid black; 
+    background-color: white;
+    float: left;
+}
+
+table{
+    width: 100%;
+}
+
+td {
+    width:20%;
+}
+*/
+/*
 #empId {
     width: 400px;
     padding: 5px;
@@ -66,54 +124,6 @@
     height: 10px;
     background-color: white;
 }
-
-#job {
-    width: 400px;
-    padding: 5px;
-    margin: 5px;
-}
-
-#jobTitle {
-    width: 200px;
-    border: 2px solid black;
-    padding: 10px;
-    margin: 5px;
-    height: 10px;
-    background-color: white;
-}
-
-#salary {
-    width: 300px;
-    padding: 5px;
-    margin: 5px;
-}  
-
-#salaryInput {
-    width: 150px;
-    border: 2px solid black;
-    padding: 10px;
-    margin: 10px;
-    height: 10px;
-    background-color: white;
-}
-
-#submitButton{
-    height:37px;
-    width: 75px;
-    border-radius: 10px;
-    margin: 10px;
-    padding:5px;
-    border: 2px solid black; 
-    background-color: white;
-}
-
-table{
-    width: 100%;
-}
-
-td {
-    width:20%;
-}
-
+*/
 
  
