@@ -22,11 +22,11 @@ router.get('/', function(req,res) {
                     res.sendStatus(500);
                 } else {
                     res.send(result.rows);
-                }
-            });
-        }
-    });
-});
+                } //end successful response 
+            }); // end DB query
+        } //end successful DB connection
+    });//end attempted DB connection
+});//end GET route
 
 //post route
 router.post('/', function(req,res){

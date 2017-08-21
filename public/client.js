@@ -7,6 +7,16 @@ app.controller('EmployeeController', ['$http', function ($http){
     console.log('Employee controller has been loaded');
     var self = this;
     self.employees = [];
+    //calculate the monthly salary expenditure for the company
+    self.getTotalMonthlySalary = function () {
+        var monthlySalary = total/12;
+        var total = 0;
+        for (var i = 0; i < self.employees.length; i++) {
+            var salary = self.employees.annualSalary [i];
+            total += salary; 
+        }//end loop through employees array
+        return total;
+    }//end getTotalMonthlySalary function
 
     //gets employee list from DB to load on the DOM
     self.getEmployees = function() {
