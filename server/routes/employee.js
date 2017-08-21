@@ -42,7 +42,8 @@ router.post('/', function(req,res){
             //connection established, query can proceed
             db.query('INSERT INTO employees(first_name, last_name, job_title, annual_salary) VALUES ($1, $2, $3, $4);', 
             [newEmployee.firstName, newEmployee.lastName, newEmployee.jobTitle, newEmployee.annualSalary],
-                done());
+                function(errorMakingQuery, results) {
+                    done();
                 if(errorMakingQuery){
                     //if query is not successful
                     console.log('There was a problem with the query');
@@ -51,9 +52,9 @@ router.post('/', function(req,res){
                  //the query was successful
                  res.sendStatus(201);   
                 } //response status code
-            }; //end query
-        }); //end DB connection
-    }); //end post route
-
+            }); //end query
+        } //end successful DB connection
+    }); //end attempted DB connection
+});//end POST route
 
 module.exports = router;

@@ -7,16 +7,6 @@ app.controller('EmployeeController', ['$http', function ($http){
     console.log('Employee controller has been loaded');
     var self = this;
     self.employees = [];
-    //calculate the monthly salary expenditure for the company
-    self.getTotalMonthlySalary = function () {
-        var monthlySalary = total/12;
-        var total = 0;
-        for (var i = 0; i < self.employees.length; i++) {
-            var salary = self.employees.annualSalary [i];
-            total += salary; 
-        }//end loop through employees array
-        return total;
-    }//end getTotalMonthlySalary function
 
     //gets employee list from DB to load on the DOM
     self.getEmployees = function() {
@@ -41,7 +31,20 @@ app.controller('EmployeeController', ['$http', function ($http){
             self.getEmployees(); //this function will now update the DOM with the //new employee
        }); //end of $http POST request
    }; //end of postNewEmployee function
-   self.newEmployee = {};
+
+        //clear the DOM of newly entered employee
+        self.newEmployee = {};
+    
+    //calculate the monthly salary expenditure for the company
+    self.getTotalMonthlySalary = function () {
+        var monthlySalary = total/12;
+        var total = 0;
+        for (var i = 0; i < self.employees.length; i++) {
+            var salary = self.employees.annualSalary[i];
+            total += salary; 
+        }//end loop through employees array
+        return total;
+    }//end getTtotalMonthlySalary function
 }]);
 
 
