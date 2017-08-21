@@ -31,7 +31,6 @@ app.controller('EmployeeController', ['$http', function ($http){
             self.getEmployees(); //this function will now update the DOM with the //new employee
        }); //end of $http POST request
    }; //end of postNewEmployee function
-   self.getEmployees();
    self.newEmployee = {};
 }]);
 

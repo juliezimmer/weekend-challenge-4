@@ -50,10 +50,10 @@ router.post('/', function(req,res){
                 } else {
                  //the query was successful
                  res.sendStatus(201);   
-                }
-            };
-        });
-    });
+                } //response status code
+            }; //end query
+        }); //end DB connection
+    }); //end post route
 
 
 module.exports = router;
